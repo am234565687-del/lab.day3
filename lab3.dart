@@ -1,5 +1,5 @@
 //Ass1
-/*class Car {
+class Car {
   String brand;
   int year;
 
@@ -60,10 +60,7 @@ class BankAccount {
 class BankAccount {
   double _balance = 0;
 
-  // Getter
   double get balance => _balance;
-
-  // Setter لإضافة فلوس
   set deposit(double amount) {
     if (amount > 0) {
       _balance += amount;
@@ -77,17 +74,15 @@ class BankAccount {
 void main() {
   BankAccount account = BankAccount();
 
-  account.deposit = 500;   // إيداع 500
+  account.deposit = 500;   
   print("Balance: ${account.balance}");
 
-  account.deposit = -100;  // محاولة إيداع غلط
+  account.deposit = -100; 
   print("Balance: ${account.balance}");
 }
 //Ass3
 class User {
   String _username = "";
-
-  // Setter مع التحقق إن الاسم مش فاضي
   set username(String value) {
     if (value.isNotEmpty) {
       _username = value;
@@ -96,18 +91,16 @@ class User {
       print("Invalid username! It cannot be empty.");
     }
   }
-
-  // Getter
   String get username => _username;
 }
 
 void main() {
   User user = User();
 
-  user.username = "Aya"; // صحيح
+  user.username = "Aya";
   print("Current username: ${user.username}");
 
-  user.username = "";    // خطأ
+  user.username = "";   
   print("Current username: ${user.username}");
 }*/
 //Ass4
@@ -179,16 +172,14 @@ class Cart {
 }
 
 void main() {
-  // Create 3 products
   Product p1 = Product(1, "Laptop", 1500);
   Product p2 = Product(2, "Phone", 800);
   Product p3 = Product(3, "Headphones", 200);
 
-  // Add 2 to the cart
+
   Cart cart = Cart();
   cart.addProduct(p1);
   cart.addProduct(p2);
 
-  // Print cart contents and total price
   cart.showCart();
 }
